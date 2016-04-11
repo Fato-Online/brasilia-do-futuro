@@ -1,0 +1,134 @@
+@font-face {
+	font-family: 'Stag';
+	src: url('/../fonts/Stag-LightItalic.eot');
+	src: url('/../fonts/Stag-LightItalic.eot?#iefix') format('embedded-opentype'),
+	url('/../fonts/Stag-LightItalic.svg') format('svg'),
+	url('/../fonts/Stag-LightItalic.woff') format('woff'),
+	url('/../fonts/Stag-LightItalic.ttf') format('truetype');
+	font-weight: 300;
+	font-style: italic;
+}
+
+.menu-header {
+	top: -60px ;
+	left: 0 ;
+	z-index: 9999 ;
+	width: 100% ;
+	position:absolute ;
+	transition: all 0.5s ease ;
+	font: italic 100 32px/34px 'Stag', Arial, Verdana, Helvetica, sans-serif;
+}
+
+a#menu-close {
+	display: none;
+}
+
+#hotsite .bg-color {
+	background-color: #f1f1f1;
+	height: 60px !important;
+	text-align: center;
+}
+
+#hotsite .menu {
+	margin: 0 auto;
+	padding: 10px 0 10px 0px;
+
+}
+
+#hotsite .menu-items {
+	padding-left: 0px !important;
+}
+
+#hotsite li{
+	display: inline;
+	margin-right: 15px;
+	font-size: 25px !important;
+}
+
+#hotsite .mg-fix {
+	margin-right: 0px;
+}
+
+#hotsite a:link {
+	text-decoration: none;
+}
+
+#home a{
+	color: #333;
+}
+
+#politica a{
+	color:#ee2c00;
+}
+
+#economia a{
+	color:#56bf2c;
+}
+
+#brasilia a{
+	color:#4ed3ea;
+}
+
+#esporte a{
+	color:#2980b9;
+}
+
+#tv-fato a{
+	color:#212121;
+}
+
+#hotsite .ico-menu {
+	width: 50px;
+	height: 50px;
+	margin: 15px 20px 0px 0px;
+	padding: 8px 0px 8px 9px;
+	background: #e0a50f;
+	float: right;
+	border-radius: 25px;
+}
+
+#hotsite .ico-menu a{
+	color: #222;
+}
+
+#hotsite img {
+	width: 39px;
+	padding: 16px 4px 0px 16px;
+	vertical-align: inherit;
+}
+
+#pre-loading{
+	height: 100%;
+	position: fixed;
+	background: #e0a50f;
+	z-index: 999;
+	width: 100%;
+}
+
+#pre-loading #load-gif{
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	margin: auto;
+	width: 64px;
+	height: 64px;
+}
+
+/*CELULAR RETRATO*/
+@media (max-width: 479px) {
+	.menu-header {
+		top: -240px ;
+	}
+
+	#hotsite .bg-color {
+		height: auto !important;
+		text-align: left;
+		padding: 0px 20px
+	}
+
+	#hotsite li{
+		display: block;
+	}
+}
