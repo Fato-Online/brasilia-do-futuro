@@ -5,7 +5,7 @@ body, html{
 }
 
 .content-all{
-	background-image: url('../images/background-home.png');
+	background-image: url('https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro/master/images/background-home.png');
 	background-position: 50% 50%;
 	height: 100%;
 	background-size: cover;
@@ -13,7 +13,7 @@ body, html{
 }
 
 .aviso{
-	/*display: none;*/
+	display: none;
 	background: rgba(0, 0, 0, 0.9);
 	position: fixed;
 	width: 100%;
@@ -33,7 +33,7 @@ body, html{
 }
 
 #title{
-	background-image: url('../images/title.png');
+	background-image: url('https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro/master/images/title.png');
 	mix-blend-mode: hard-light;
 	background-repeat: no-repeat;
 	background-size: 80% 80%;
@@ -73,7 +73,7 @@ div.parallax-container {
 
 /*PAGES*/
 .parallax1 {
-	background-image: url('../images/door.png');
+	background-image: url('https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro/master/images/door.png');
 	background-position: 50% 40%;
 	background-size: 25%;
 	background-repeat: no-repeat;
@@ -83,7 +83,7 @@ div.parallax-container {
 
 }
 .parallax2 {
-	background-image: url('../images/light.png');
+	background-image: url('https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro/master/images/light.png');
 	background-position: 50% 30%;
 	background-size: 50%;
 	background-repeat: no-repeat;
@@ -95,7 +95,7 @@ div.parallax-container {
 
 .parallax3 {
 	position: absolute;
-	background-image: url('../images/cloud_02.png');
+	background-image: url('https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro/master/images/cloud_02.png');
 	background-position: 30% 1000%;
 	background-size: 100%;
 	width: 100%;
@@ -105,7 +105,7 @@ div.parallax-container {
 }
 
 .smartphone{
-	background-image: url('../images/smartphone.png');
+	background-image: url('https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro/master/images/smartphone.png');
 	background-position: 10% 50%;
 	background-size: 30%;
 	width: 100%;
@@ -300,7 +300,6 @@ div.parallax-container {
 
 	/*PAGES*/
 	.parallax1 {
-		background-image: url('../images/door.png');
 		background-position: 50% 40%;
 		background-size: 70%;
 		background-repeat: no-repeat;
@@ -309,7 +308,6 @@ div.parallax-container {
 		bottom: -500px;
 	}
 	.parallax2 {
-		background-image: url('../images/light.png');
 		background-position: 50% 60%;
 		background-size: 100%;
 		background-repeat: no-repeat;
@@ -320,7 +318,6 @@ div.parallax-container {
 	}
 	.parallax3 {
 		position: absolute;
-		background-image: url('../images/cloud_02.png');
 		background-position: 30% 80%;
 		background-size: 100%;
 		width: 100%;
