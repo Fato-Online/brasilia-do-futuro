@@ -12,26 +12,6 @@ body, html{
 	background-repeat: no-repeat;
 }
 
-.aviso{
-	display: none;
-	background: rgba(0, 0, 0, 0.9);
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	z-index: 999;
-	padding: 10% 0px;
-	color: white;
-	text-align: center;
-	text-transform: uppercase;
-	font-size: 30px;
-	font-weight:  300;
-	font-family: 'Open Sans', sans-serif;
-}
-
-.aviso p{
-	margin-top: 20px;
-}
-
 #title{
 	background-image: url('https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro/master/images/title.png');
 	mix-blend-mode: hard-light;
@@ -96,7 +76,7 @@ div.parallax-container {
 .parallax3 {
 	position: absolute;
 	background-image: url('https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro/master/images/cloud_02.png');
-	background-position: 30% 1000%;
+	background-position: 30% 280px;
 	background-size: 100%;
 	width: 100%;
 	height: 100%;
@@ -225,6 +205,27 @@ div.parallax-container {
 	width: 30px;
 }
 
+/*AVISO*/
+.aviso{
+	display: none;
+	background: rgba(0, 0, 0, 0.9);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	padding: 15% 0px;
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 30px;
+	font-weight:  300;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.aviso p{
+	margin-top: 20px;
+}
+
 
 /*TABLET*/
 @media (max-width: 991px) {
@@ -232,7 +233,7 @@ div.parallax-container {
 }
 
 /*CELULAR PAISAGEM*/
-@media (max-width: 767px) {
+@media (max-width: 768px) {
 	.aviso{
 		display: block;
 	}
