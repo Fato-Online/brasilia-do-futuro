@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('.content-all').load('bsb-futuro-inicio.html');
+	// $('.content-all').load('bsb-futuro-inicio.html');
 
 	$('body').jKit();
 
