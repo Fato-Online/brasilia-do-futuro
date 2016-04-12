@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$('.content-all').load('home.html');
+	// $('.content-all').load('home.html');
 
 	$('body').jKit();
 
