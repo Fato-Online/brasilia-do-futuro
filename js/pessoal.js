@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	// $('.content-all').load('home.html');
+	$('.content-all').load('includes/home.html');
 
 	$('body').jKit();
 
@@ -29,11 +29,11 @@ $(document).ready(function(){
 
 	$('#menu-home').click(function(event) {
 		sobeHome()
-		setTimeout(function(){ $('.content-all').load('home.html'); }, 1500);
+		setTimeout(function(){ $('.content-all').load('includes/home.html'); }, 1500);
 	});
 
 	$('#menu-startup').click(function(event) {
 		sobeHome()
-		setTimeout(function(){ $('.content-all').load('startups.html'); }, 1500);
+		setTimeout(function(){ $('.content-all').load('includes/startups.html'); }, 1500);
 	});
 });

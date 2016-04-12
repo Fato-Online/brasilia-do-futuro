@@ -26,7 +26,7 @@ $(document).ready(function(){
 		$(".menu-hotsite").animate({"right":"-40%"}, 1000,"easeInOutQuint");
 		$('.hamburger-menu').animate({"right":"5%"}, 1000,"easeInOutQuint");
 		sobeHome();
-		setTimeout(function(){ $('.content-all').load('startups.html'); }, 1500);
+		setTimeout(function(){ $('.content-all').load('includes/startups.html'); }, 1500);
 	});
 
 	//HOME
