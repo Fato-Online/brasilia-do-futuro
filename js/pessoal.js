@@ -1,15 +1,23 @@
 $(document).ready(function(){
-	// $('.content-all').load('bsb-futuro-inicio.html');
-
 	$('body').jKit();
 
-	var sobeHome = function(){
-		$(".btn-success").animate({"opacity":0}, 1000);
-		$('.text-page').animate({'opacity':0}, 1000,"easeInOutQuint");
-		$('.anima-01').animate({'top':-800}, 1000,"easeInExpo");
-		$('.anima-02').delay(100).animate({'top':-800}, 1000,"easeInExpo");
-		$('.parallax3').delay(200).animate({'top':300}, 1000,"easeInExpo");
-	}
+	$('.parallax1 ').animate({'bottom':0}, 1000,"easeInExpo");
+	$('.parallax3').delay(500).animate({'opacity':1}, 1000,"easeInOutQuint");
+	$('.parallax2').delay(1000).animate({'opacity':1}, 1000,"easeInOutQuint");
+
+	//HOME
+		$('.div-conteudo').jKit('parallax', {
+			'strength': '1',
+			'axis': 'both' ,
+			'detect':'scroll'
+		});
+
+	$('.btn-access').click(function(event) {
+		$("body,html").animate({
+			scrollTop: $("#startups").offset().top
+		}, 2000,"easeInOutQuint");
+	});
+
 
 	// MENU
 	$('.hamburger-menu').click(function(event) {
@@ -28,12 +36,23 @@ $(document).ready(function(){
 	});
 
 	$('#menu-home').click(function(event) {
-		sobeHome()
-		setTimeout(function(){ $('.content-all').load('bsb-futuro-inicio.html'); }, 1500);
+		$("body,html").animate({
+			scrollTop: $("#home").offset().top
+		}, 2000,"easeInOutQuint");
 	});
 
 	$('#menu-startup').click(function(event) {
-		sobeHome()
-		setTimeout(function(){ $('.content-all').load('bsb-futuro-startups.html'); }, 1500);
+		$("body,html").animate({
+			scrollTop: $("#startups").offset().top
+		}, 2000,"easeInOutQuint");
+	});
+
+	//MENU-INTERNO
+	$(".menu-interno li").click(function(event) {
+		$(".sections").animate({"right":"0%"}, 1000,"easeInOutQuint");
+	});
+
+	$(".sections .btn-section-close").click(function(event) {
+		$(".sections").animate({"right":"-50%"}, 1000,"easeInOutQuint")
 	});
 });

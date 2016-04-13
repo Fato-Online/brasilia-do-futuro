@@ -1,16 +1,20 @@
+html{
+	overflow-x: hidden;
+}
+
 body, html{
 	height: 100%;
 	background-color: #000 !important;
-	overflow: hidden;
-}
-
-.content-all{
 	background-image: url('https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro/master/images/background-home.png');
-	background-position: 50% 50%;
-	height: 100%;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+
+.content-all{
+	height: 100%;
+	margin-bottom: 30%;
+}
+
 
 #title{
 	background-image: url('https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro/master/images/title.png');
@@ -43,7 +47,6 @@ div.parallax-container {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	top: 110px;
 }
 
 .parallax{
@@ -54,7 +57,7 @@ div.parallax-container {
 /*PAGES*/
 .parallax1 {
 	background-image: url('https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro/master/images/door.png');
-	background-position: 50% 40%;
+	background-position: 50% 100%;
 	background-size: 25%;
 	background-repeat: no-repeat;
 	width: 100%;
@@ -64,7 +67,7 @@ div.parallax-container {
 }
 .parallax2 {
 	background-image: url('https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro/master/images/light.png');
-	background-position: 50% 30%;
+	background-position: 50% 0%;
 	background-size: 50%;
 	background-repeat: no-repeat;
 	mix-blend-mode: screen;
@@ -76,12 +79,20 @@ div.parallax-container {
 .parallax3 {
 	position: absolute;
 	background-image: url('https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro/master/images/cloud_02.png');
-	background-position: 30% 280px;
-	background-size: 100%;
+	background-position: 50% 200px;
+	background-size: 60%;
 	width: 100%;
 	height: 100%;
 	background-repeat: no-repeat;
 	opacity: 0;
+}
+
+#startups .div-conteudo{
+	margin-top: 80px;
+}
+
+#startups .text-page{
+	padding-top: 100px;
 }
 
 .smartphone{
@@ -123,10 +134,10 @@ div.parallax-container {
 }
 
 .sections{
-	position: absolute !important;
 	background: white;
-	z-index: 999;
 	right: -50%;
+	position: absolute !important;
+	z-index: 999;
 	height: 100%;
 	padding: 50px 55px !important;
 }
@@ -139,7 +150,7 @@ div.parallax-container {
 .hamburger-menu{
 	width: 60px;
 	height: 60px;
-	position: relative;
+	position: fixed;
 	z-index: 998;
 	right: 5%;
 	top: 3%;
@@ -155,7 +166,7 @@ div.parallax-container {
 }
 
 .menu-hotsite{
-	position: relative;
+	position: fixed;
 	z-index: 999;
 	right: -40%;
 	top: 3%;
