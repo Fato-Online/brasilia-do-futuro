@@ -88,7 +88,7 @@ div.parallax-container {
 }
 
 .content-pages{
-	background-image: url("../images/bg-02.jpg");
+	background-image: url("https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro/master/images/bg-02.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
 }
