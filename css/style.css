@@ -140,6 +140,11 @@ div.parallax-container {
 	z-index: 999;
 	height: 100%;
 	padding: 50px 55px !important;
+	overflow: auto;
+}
+
+.conteudo-section{
+	display: none;
 }
 
 .btn-section-close{
@@ -197,7 +202,7 @@ div.parallax-container {
 
 /*SOCIAL*/
 .nav-social{
-	position: absolute;
+	position: fixed;
 	z-index: 999;
 	text-transform: uppercase;
 	color: white;

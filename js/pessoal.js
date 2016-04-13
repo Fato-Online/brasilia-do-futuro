@@ -18,7 +18,6 @@ $(document).ready(function(){
 		}, 2000,"easeInOutQuint");
 	});
 
-
 	// MENU
 	$('.hamburger-menu').click(function(event) {
 		$(this).animate({"right":"-20%"}, 1000,"easeInOutQuint");
@@ -53,6 +52,17 @@ $(document).ready(function(){
 	});
 
 	$(".sections .btn-section-close").click(function(event) {
-		$(".sections").animate({"right":"-50%"}, 1000,"easeInOutQuint")
+		$(".sections").animate({"right":"-50%"}, 1000,"easeInOutQuint",function(){
+			$(".conteudo-section").css('display', 'none');
+		})
+	});
+
+	//STARTUP
+	$("#start-01").click(function(event) {
+		$("#start-cont-01").css('display', 'block');
+	});
+
+	$("#start-02").click(function(event) {
+		$("#start-cont-02").css('display', 'block');
 	});
 });
