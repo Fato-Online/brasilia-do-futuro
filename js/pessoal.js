@@ -65,4 +65,16 @@ $(document).ready(function(){
 	$("#start-02").click(function(event) {
 		$("#start-cont-02").css('display', 'block');
 	});
+
+	$("#start-03").click(function(event) {
+		$("#start-cont-03").css('display', 'block');
+	});
+
+	$("#start-04").click(function(event) {
+		$("#start-cont-04").css('display', 'block');
+	});
+
+	$("#start-05").click(function(event) {
+		$("#start-cont-05").css('display', 'block');
+	});
 });
