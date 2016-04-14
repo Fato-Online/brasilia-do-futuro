@@ -19,15 +19,30 @@ $(document).ready(function(){
 	});
 
 	//MENU-INTERNO
-	$(".menu-interno li").click(function(event) {
-		$(".sections").animate({"right":"0%"}, 1000,"easeInOutQuint");
-	});
+	if ($(window).width()<479) {
+		$(".menu-interno li").click(function(event) {
+			$(".sections").slideDown(500);
+		});
+	} else{
+		$(".menu-interno li").click(function(event) {
+			$(".sections").animate({"right":"0%"}, 1000,"easeInOutQuint");
+		});
+	};
 
-	$(".sections .btn-section-close").click(function(event) {
-		$(".sections").animate({"right":"-50%"}, 1000,"easeInOutQuint",function(){
-			$(".conteudo-section").css('display', 'none');
-		})
-	});
+	if ($(window).width()<479) {
+		$(".sections .btn-section-close").click(function(event) {
+			$(".sections").slideUp(500, function(){
+				$(".conteudo-section").css('display', 'none');
+			});
+		});
+	} else{
+		$(".sections .btn-section-close").click(function(event) {
+			$(".sections").animate({"right":"-50%"}, 1000,"easeInOutQuint",function(){
+				$(".conteudo-section").css('display', 'none');
+			})
+		});
+	};
+
 
 	//STARTUP
 	$("#start-01").click(function(event) {
