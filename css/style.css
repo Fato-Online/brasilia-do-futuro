@@ -12,7 +12,10 @@ body, html{
 
 .content-all{
 	min-height: 100%;
-	margin-bottom: 30%;
+}
+
+.content-pages{
+	margin-top: 30%;
 }
 
 
