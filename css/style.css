@@ -152,6 +152,7 @@ div.parallax-container {
 	height: 100%;
 	padding: 50px 55px !important;
 	overflow: auto;
+	max-width: 600px;
 }
 
 .conteudo-section{
