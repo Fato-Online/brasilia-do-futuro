@@ -43,8 +43,13 @@ $(document).ready(function(){
 		});
 	};
 
-
 	//STARTUP
+	$("#startups .menu-interno li").click(function(event) {
+		$("body,html").animate({
+				scrollTop: $("#startups").offset().top
+			}, 2000,"easeInOutQuint");
+	});
+
 	$("#start-01").click(function(event) {
 		$("#start-cont-01").css('display', 'block');
 	});
