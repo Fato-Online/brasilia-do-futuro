@@ -7,7 +7,7 @@ $(document).ready(function(){
 
 	//HOME
 		$('.div-conteudo').jKit('parallax', {
-			'strength': '1',
+			'strength': '3',
 			'axis': 'both' ,
 			'detect':'scroll'
 		});
