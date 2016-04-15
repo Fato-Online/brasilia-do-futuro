@@ -239,9 +239,16 @@ div.parallax-container {
 .nav-social{
 	position: fixed;
 	z-index: 999;
-	text-transform: uppercase;
-	color: white;
 	margin-top: 100px;
+	cursor: pointer;
+	color: white !important;
+}
+
+.nav-social a{
+	color: white !important;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	text-decoration: none !important;
 }
 
 .nav-social ul{
@@ -250,10 +257,31 @@ div.parallax-container {
 
 .nav-social li{
 	display: block;
+	width: 30px;
+	overflow: hidden;
+}
+
+.nav-social li p{
+	display: none;
+	margin: 4px 2px;
 }
 
 .nav-social img{
 	width: 30px;
+	float: left;
+}
+
+#fb-button{
+	background: #3948ab;
+}
+#tt-button{
+	background: #42a4f5;
+}
+#ig-button{
+	background: #ab46bb;
+}
+#yt-button{
+	background: #d74314;
 }
 
 /*AVISO*/

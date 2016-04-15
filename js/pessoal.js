@@ -5,6 +5,20 @@ $(document).ready(function(){
 	$('.parallax3').delay(500).animate({'opacity':1}, 1000,"easeInOutQuint");
 	$('.parallax2').delay(1000).animate({'opacity':1}, 1000,"easeInOutQuint");
 
+	//SOCIAL
+	$('.nav-social li').on({
+		mouseenter:function(){
+			$(this).animate({width:130}, 1000,"easeInOutQuint", function(){
+				$("p",this).show("fast");
+			})
+		},
+		mouseleave:function(){
+			$(this).stop();
+			$("p",this).hide("fast");
+			$(this).animate({width:30}, 500,"linear")
+		}
+	})
+
 	//HOME
 		$('.div-conteudo').jKit('parallax', {
 			'strength': '3',
@@ -25,7 +39,15 @@ $(document).ready(function(){
 		});
 	} else{
 		$(".menu-interno li").click(function(event) {
-			$(".sections").animate({"right":"0%"}, 1000,"easeInOutQuint");
+			if ($(".sections").css('right') == '0px') {
+				$(".sections").animate({"right": '-50%'}, 1000,"easeInOutQuint", function(){
+					$(".conteudo-section").css('display', 'none');
+				});
+				$(".sections").animate({"right": '0px'}, 1000,"easeInOutQuint");
+
+			} else{
+				$(".sections").animate({"right": '0px'}, 1000,"easeInOutQuint");
+			};
 		});
 	};
 
@@ -45,28 +67,42 @@ $(document).ready(function(){
 
 	//STARTUP
 	$("#startups .menu-interno li").click(function(event) {
-		$("body,html").animate({
-				scrollTop: $("#startups").offset().top
-			}, 2000,"easeInOutQuint");
+		if ($(window).width()<479) {
+
+		} else{
+			$("body,html").animate({
+					scrollTop: $("#startups").offset().top
+				}, 1000,"easeInOutQuint");
+		};
 	});
 
 	$("#start-01").click(function(event) {
-		$("#start-cont-01").css('display', 'block');
+		setTimeout(function(){
+			$("#start-cont-01").css('display', 'block');
+		},1000);
 	});
 
 	$("#start-02").click(function(event) {
-		$("#start-cont-02").css('display', 'block');
+		setTimeout(function(){
+			$("#start-cont-02").css('display', 'block');
+		},1000);
 	});
 
 	$("#start-03").click(function(event) {
-		$("#start-cont-03").css('display', 'block');
+		setTimeout(function(){
+			$("#start-cont-03").css('display', 'block');
+		},1000);
 	});
 
 	$("#start-04").click(function(event) {
-		$("#start-cont-04").css('display', 'block');
+		setTimeout(function(){
+			$("#start-cont-04").css('display', 'block');
+		},1000);
 	});
 
 	$("#start-05").click(function(event) {
-		$("#start-cont-05").css('display', 'block');
+		setTimeout(function(){
+			$("#start-cont-05").css('display', 'block');
+		},1000);
 	});
 });
