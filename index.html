@@ -44,6 +44,104 @@
 			<img src="http://www5.smartadserver.com/ac?out=nonrich&nwid=1527&siteid=88316&pgname=brasilia_do_futuro&fmtid=34707&visit=m&tmstp=[timestamp]" border="0" alt="" /></a>
 	</noscript>
 	<!-- FIM SMART -->
+
+
+<!--************  Inicio Script Facebook  ****************
+<script>
+	 window . fbAsyncInit =  function ()  {
+		 FB . init ({
+			 appId       :  '1283131491703407' ,
+			 xfbml       :  true ,
+			 version     :  'v2.5'
+		 });
+	 };
+	 ( function ( d , s , id ){
+			var js , fjs = d . getElementsByTagName ( s )[ 0 ];
+			if  ( d . getElementById ( id ))  { return ;}
+			js = d . createElement ( s ); js . id = id ;
+			js . src =  "//connect.facebook.net/en_US/sdk.js" ;
+			fjs . parentNode . insertBefore ( js , fjs );
+		}( document ,  'script' ,  'facebook-jssdk' ));
+</script>
+************  Fim Script Facebook  ****************-->
+
+
+<!-- ********************* Inicio Login Facebook *********************
+<script>
+	// This is called with the results from from FB.getLoginStatus().
+	function statusChangeCallback(response) {
+		console.log('statusChangeCallback');
+		// console.log(response);
+		// The response object is returned with a status field that lets the
+		// app know the current login status of the person.
+		// Full docs on the response object can be found in the documentation
+		// for FB.getLoginStatus().
+		if (response.status === 'connected') {
+			// Logged into your app and Facebook.
+			testAPI();
+		} else if (response.status === 'not_authorized') {
+			// The person is logged into Facebook, but not your app.
+			document.getElementById('status').innerHTML = 'Please log ' +
+				'into this app.';
+		} else {
+			// The person is not logged into Facebook, so we're not sure if
+			// they are logged into this app or not.
+			document.getElementById('status').innerHTML = 'Please log ' +
+				'into Facebook.';
+		}
+	}
+	// This function is called when someone finishes with the Login
+	// Button.  See the onlogin handler attached to it in the sample
+	// code below.
+	function checkLoginState() {
+		FB.getLoginStatus(function(response) {
+			statusChangeCallback(response);
+		});
+	}
+	window.fbAsyncInit = function() {
+	FB.init({
+		appId      : '1283131491703407',
+		cookie     : true,  // enable cookies to allow the server to access
+												// the session
+		xfbml      : true,  // parse social plugins on this page
+		version    : 'v2.5' // use graph api version 2.5
+	});
+	FB.getLoginStatus(function(response) {
+		statusChangeCallback(response);
+	});
+	};
+	// Load the SDK asynchronously
+	(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/sdk.js";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+	// Here we run a very simple test of the Graph API after login is
+	// successful.  See statusChangeCallback() for when this call is made.
+
+	//funcao que exibe informacoes do usuario
+	function testAPI() {
+
+FB.api('/me',
+				{fields: "name, first_name, email, gender, link, timezone"},
+				function(response) {
+					console.log('API response', response);
+					$('#photo').attr('src', 'http://graph.facebook.com/' + response.id + '/picture?type=normal');
+					$("#name").append(response.name);
+					$("#first_name").append(response.first_name);
+					$("#email").append(response.email);
+					$("#user-id").append(response.id);
+					$("#gender").append(response.gender);
+					$("#link").append(response.link);
+					$("#timezone").append(response.timezone);
+		});
+	}
+</script>
+************  Fim Login Facebook  ****************-->
+
+
 	<nav class="nav-social">
 		<ul>
 			<li id="fb-button"><a href="https://www.facebook.com/sharer/sharer.php?u=http://fatoonline.com.br/conteudo/19491" target="_blank"><img src="images/Logo-FB.jpg" /><p>Compartilhar</p></a></li>
@@ -53,8 +151,8 @@
 		</ul>
 	</nav>
 	<div class="aviso">
-		<div class="container">
-			<img src="https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro/master/images/arrow.svg" width="30%" />
+		<div id="aviso-cont">
+			<img src="images/arrow.svg" />
 			<p>Vire o seu celular ou tablet para melhor experiência</p>
 		</div>
 	</div>
@@ -62,6 +160,21 @@
 		<div class="container title-home">
 			<div id="title"></div>
 		</div>
+
+				<!-- Div que exibe informacoes do usuario -->
+<!-- <div><b><span style="color:#F4F409">Photo:</b> <img id="photo"></img></div>
+<div id="name"><b><span style="color:#F4F409">Nome:</b> </div>
+<div id="first_name"><b><span style="color:#F4F409">Primeiro nome:</b> </div>
+<div id="email"><b><span style="color:#F4F409">Email:</b> </div>
+<div id="user-id"><b><span style="color:#F4F409">ID do usuario:</b> </div>
+<div id="gender"><b><span style="color:#F4F409">Genero:</b> </div>
+<div id="link"><b><span style="color:#F4F409">Link:</b> </div>
+<div id="timezone"><b><span style="color:#F4F409">Timezone:</b> </div> -->
+
+<!-- ********************* Final Codigo Login Facebook ********************* -->
+																												<!-- Botao login e Logoff -->
+<!-- <div class="btn-facebook"> <fb:login-button autologoutlink="true"></fb:login-button><p><br><img id="photo"></img></p> </div> -->
+
 		<div class="btn-access btn btn-success">Entre</div>
 			<div class="parallax parallax1 anima-01"></div>
 		<div class="parallax-container div-conteudo">
@@ -80,7 +193,7 @@
 			</div>
 			<div class="conteudo-section" id="start-cont-03">
 				<p>Depois de economizar combustível, pensar no meio ambiente, que tal praticar exercício e ainda ganhar pontos para trocar por passagens aéreas ou outros mimos oferecidos por programas de milhagem? Os criadores do Mova Mais pensaram nisto e há um ano lançaram o aplicativo que tem o objetivo de incentivar as pessoas a praticarem exercício ao ar livre.  Depois dessa ideia deu até vontade de dar uma corridinha, mas antes disso irei terminar de escrever o texto para vocês. </p>
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/pcXzYj-snbI" frameborder="0" allowfullscreen></iframe>
+				<iframe width="100%" height="315" src="https://www.youtube.com/embed/pcXzYj-snbI" frameborder="0" allowfullscreen></iframe>
 			</div>
 			<div class="conteudo-section" id="start-cont-04">
 				<p>Embora Brasília seja um novo berço de incubadoras, onde as pequenas empresas buscam apoio com alguma diretiva governamental ou regional,há grande dificuldade em realizar algumas ideias. De acordo com o professor de Engenharia Civil da Universidade de Brasília, Pastor Willy Gonzales Taco, embora tenha melhorado o apoio financeiro, ainda é preciso mudar a cultura das pessoas.'' As pessoas precisam acreditar que podem opinar e participar de projetos. Normalmente as pessoas mais simples acham que as ideias virão de doutores, mestres. Essa cultura precisa ser mudada'', afirma o professor.</p>
@@ -98,7 +211,13 @@
 		</div>
 		<div class="container text-page">
 			<div class="col-md-6 pull-right">
-				<h1>Startups de Brasília!</h1>
+				<h1>Startups de Brasília</h1>
+        <!-- Div que exibe informacoes do usuario -->
+<!-- <div> <img id="photo"></img></div>
+<p>Bem vindo <b><tag id='first_name'></tag></b> esse é o novo hotsite.</p> -->
+
+
+
 				<p>Há pelo menos cinco anos Brasília deixou de ser apenas a capital do País onde abriga políticos de vários estados e a cidade do concurso público. Brasília se tornou uma região com grande poder na economia colaborativa. De acordo com estudo realizado pela Endeavor, Brasília foi eleita a quinta melhor cidade para empreender no Brasil: além de ter o terceiro maior PIB do país, a população local tem alto poder de compra e todos os processos analisados no ambiente regulatório são efetuados em prazos inferiores à média nacional.</p>
 				<div class="menu-interno">
 					<ul>
@@ -111,19 +230,17 @@
 				</div>
 			</div>
 		</div>
-	<div id="proximo-01" class="btn-proximo"><i class="fa fa-clock-o" aria-hidden="true"></i> Próxima viagem</div>
+	<div id="proximo-01" class="btn-proximo btn-ativo"><i class="fa fa-clock-o" aria-hidden="true"></i> Próxima viagem</div>
 	</section>
 	<section class="content-all content-pages" id="herois">
 		<div class="sections section-startup-01 col-md-6">
 			<div class="conteudo-section" id="herois-cont-01">
 				<p>A Ampare atende 120 famílias em sua sede localizada na 709 norte, a maioria delas possui baixa renda. Ali as pessoas com deficiência recebem atendimento especializado e adequado às necessidades individuais, objetivando a independência e – Estimulação Precoce – a partir do nascimento a inclusão na sociedade.</p>
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/0Uk7gZ5eYdE" frameborder="0" allowfullscreen></iframe>
-			</div>
-			<div class="conteudo-section" id="herois-cont-02">
+				<iframe width="100%" height="315" src="https://www.youtube.com/embed/0Uk7gZ5eYdE" frameborder="0" allowfullscreen></iframe>
+				<div class="line-content"></div>
 				<p>Em 1994, Gláucia e Clayton Aguiar adotaram 14 crianças que foram abandonadas em diversos hospitais de Brasília em razão de possuírem graves deficiências múltiplas. Eles criaram a Casa Lar Ampare que está localizada na Vila Planalto. Hoje, a casa abriga 10 pessoas com idade entre 10 e 28 anos, que chegaram ali ainda bebês. São pessoas extremamente dependentes com deficiência intelectual e múltipla, com pouca expectativa de vida, e que recebem atendimento digno e inclusão social.</p>
 				<p>Em 2015, após a morte da fundadora da Casa Lar, Gláucia Aguiar, a coordenação geral da entidade ficou sob a responsabilidade da sua irmã, Mirna de Oliveira Bueno. A família de Gláucia permanece dando continuidade ao seu trabalho que por várias décadas fez a diferença na vida de muitas pessoas transformando o mundo em um lugar melhor.</p>
-			</div>
-			<div class="conteudo-section" id="herois-cont-03">
+				<div class="line-content"></div>
 				<p>Como colaborar com a Ampare:</p>
 				<p><strong>Banco do Brasil – BB</strong><br>
 				Agência: 1003-0<br>
@@ -138,6 +255,20 @@
 				Agência: 0007<br>
 				Conta Corrente (op.003): 1974-0</p>
 			</div>
+			<div class="conteudo-section" id="herois-cont-02">
+				<h1>O futuro não vive mais sem os ativistas </h1>
+				<h3>Grupo de Brasília luta para criar Partido político com foco nos direitos animais</h3>
+				<p>Fernanda Mendez, 34 anos, assistente de seguros, sempre gostou de ajudar os animais, só na casa dela são 46 animais resgatados (15 cães, 28 gatos, uma égua e 2 bezerros). Entre tantas fofuras a que se destaca é a linda cadelinha Bibi, que foi resgatada pela assistente de seguros em dezembro de 2014. Quem olha assim nem imagina o quanto ela sofreu quando ainda era filhote. Fernanda encontrou Bibi em Sobradinho I com forte anemia, espancada e com muitos carrapatos.</p>
+				<div class="line-content"></div>
+				<img src="images/info-03.jpg" width="100%" alt="">
+				<div class="line-content"></div>
+				<h2>Visão do governo <i class="fa fa-eye" aria-hidden="true"></i></h2>
+				<p>Atualmente as medidas adotadas pelo GDF em relação aos animais são feitas com o acolhimento do animal com um laudo prévio indicando problemas de zoonose. Eles são tratados e alimentados e posteriormente colocados para a adoção. “Nosso apelo com público é que já tenha um tratamento humanizado com esses animais, independente de terem sidos adotados ou nao”, afirma o Diretor de Vigilância Ambiental em Saúde, Divino Martins.</p>
+				<p>Existe uma proposta de projeto lei para tramitar na Câmara Federal para implantar um acolhimento mais humanizado para esses animais. “Temos o total interesse de que isso seja definido porque a partir disso serão estabelecidas rubricas, orçamentos e recursos financeiros para efetivar o trabalho na prática”, explica o diretor.</p>
+				<div class="line-content"></div>
+				<iframe width="100%" height="315" src="https://www.youtube.com/embed/2mOZ4KfTOGs" frameborder="0" allowfullscreen></iframe>
+				<p>Em quatro meses o ANIMAIS já arrecadou R$ 20 mil reais para o processo de sua constituição legal tais como: registro de documentos em cartório de títulos, publicação do estatuto no Diário Oficial da União.  Atualmente a etapa mais importante do processo de criação do partido está em execução, é a coleta, o processamento e a certificação de cerca de meio milhão de assinaturas de apoio à criação do ANIMAIS em cartórios eleitorais de todo o país.</p>
+			</div>
 			<div class="btn-section-close"><span class="glyphicon glyphicon-remove"></span> FECHAR</div>
 		</div>
 		<div class="parallax-container div-conteudo">
@@ -151,13 +282,64 @@
 				<div class="menu-interno">
 					<ul>
 						<li id="herois-01"><i class="fa fa-bolt  fa-3x" aria-hidden="true"></i></li>
-						<li id="herois-02"><i class="fa fa-heart  fa-3x" aria-hidden="true"></i></li>
-						<li id="herois-03"><i class="fa fa-hand-paper-o  fa-3x" aria-hidden="true"></i></li>
+						<li id="herois-02"><i class="fa fa-bolt  fa-3x" aria-hidden="true"></i><i class="fa fa-bolt  fa-3x" aria-hidden="true"></i></li>
 					</ul>
 				</div>
 			</div>
 		</div>
-	<div class="btn-proximo btn-top"><i class="fa fa-clock-o" aria-hidden="true"></i> Próxima viagem - 25/04</div>
+	<div class="btn-proximo btn-ativo" id="proximo-02"><i class="fa fa-clock-o" aria-hidden="true"></i> Próxima viagem</div>
+	</section>
+	<section class="content-all content-pages" id="atletas">
+		<div class="sections  col-md-6">
+			<div class="conteudo-section" id="atletas-cont-01">
+				<h1>Despontando para o mundo</h1>
+				<img src="images/Ronald-Rudson.jpg" width="100%" alt="">
+				<p>Ronald Rudson de apenas 24 anos é a grande promessa do basquete de Brasília. Ele tem se destacado como pivô do time do UniceuB-BRB e desperta os olhares de vários treinadores do Brasil. Este ano o atleta representou o país  pela primeira vez jogando pelo Novo Basquete Brasil (NBB) no Jogo das Estrelas. No total são doze jogadores na NBB Brasil disputando com a NBB Mundo, e quatro de Brasília estão nesse time sendo Derik, Fúlvio, Giovannoni e Ronald.</p>
+				<p>Ainda não saiu um convite oficial para Ronald compor os times americanos, como NBA, ou da Europa, mas tudo leva a crer que isto não levará muito tempo, já que o jogador tem sido muito citado pelos técnicos brasileiros por conta da atuação excepcional em quadra. “É meu sonho jogar em grandes times da Europa ou NBA. Nos finais das temporadas sempre chegam os convites para jogar em outros times do Brasil, mas quero renovar contrato com o meu time e trazer mais títulos para nossa capital”, conta.</p>
+				<p>Com 2,11cm de altura, Ronald é o mais alto do time, sim gente, 2,11cm. Escrevi de novo para vocês não acharem que leram errado. Mas o que ele tem de tamanho, tem de simpatia. Eu tive que me esforçar para fazer a entrevista com ele, e olha que sou alta!!! Confira mais sobre o GRANDE atleta.
+				</p>
+			</div>
+			<div class="conteudo-section" id="atletas-cont-02">
+				<h1>Marchando para o futuro</h1>
+				<img src="images/caio.jpg" width="100%" alt="">
+				<p>Caio Sena, brasiliense, 23 anos, atleta da marcha atlética está na Espanha treinando para competir na Copa do Mundo de Marcha Atlética 2016, que acontecerá na Itália em maio. Ele vem se destacando cada vez mais na modalidade na qual ficou em terceiro lugar em seu primeiro teste para a Copa Brasil, na época aos 16 anos.</p>
+				<p>A rotina de treinos é de segunda à sexta, para os iniciantes, e até os sábados para atletas mais avançados. Os alunos têm aulas com professores voluntários e o critério para participar do clube é ter vontade de praticar esporte. “Vamos atrás de crianças que queiram participar, fazendo eventos em escolas. Os que se destacam, convidamos para o CASO. Mas isso não é critério para entrar no clube, basta apenas querer treinar”, conta Gianetti.</p>
+				<p>Quando foi atleta a mãe de Caio teve que sair de Brasília porque a marcha atlética na cidade não era muito conhecida. Para poder competir, mudou para São Paulo e disputou títulos pelo estado. Hoje essa condição é totalmente diferente para Caio, que disputa por Brasília e continua morando na cidade. Isso tudo graças ao apoio da Secretaria de Esportes do DF e de patrocinadores.</p>
+			</div>
+			<div class="btn-section-close"><span class="glyphicon glyphicon-remove"></span> FECHAR</div>
+		</div>
+		<div class="parallax-container div-conteudo">
+			<div class="parallax trofeu-atletas anima-01"></div>
+			<div class="parallax parallax3"></div>
+		</div>
+		<div class="container text-page">
+			<div class="col-md-6 pull-right">
+				<h1>Produzindo Atletas</h1>
+				<p>Dois atletas da cidade de diferentes modalidades estão se destacando nacional e internacionalmente por meio de suas habilidades</p>
+				<div class="menu-interno">
+					<ul>
+						<li id="atletas-01"><i class="fa fa-trophy  fa-3x" aria-hidden="true"></i></li>
+						<li id="atletas-02"><i class="fa fa-trophy  fa-3x" aria-hidden="true"></i><i class="fa fa-trophy  fa-3x" aria-hidden="true"></i></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	<div class="btn-proximo btn-top"><i class="fa fa-clock-o" aria-hidden="true"></i> Próxima viagem - 02/05</div>
+	</section>
+	<section class="content-all content-pages" id="equipe">
+		<div class="container">
+			<h1 class="section-title">EQUIPE</h1>
+			<h3 class="subtitle-equipe">Projeto</h3>
+			<p>Halline Medeiros</p>
+			<h3 class="subtitle-equipe">Conteúdo</h3>
+			<p>Naiane Carvalho, Leiliane Rebouças e Loraine Ferreira </p>
+			<h3 class="subtitle-equipe">Identidade Visual e Criação</h3>
+			<p>Alexandre Fonseca</p>
+			<h3 class="subtitle-equipe">Edição de Vídeos</h3>
+			<p>Vinícius Miranda</p>
+			<h3 class="subtitle-equipe">Desenvolvimento</h3>
+			<p>Alexandre Fonseca e Fabrício Assis</p>
+		</div>
 	</section>
 </body>
 </html>
