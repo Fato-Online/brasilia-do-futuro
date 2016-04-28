@@ -181,8 +181,9 @@ $(document).ready(function(){
 
 	$("#atletas-03").click(function(event) {
 		setTimeout(function(){
-			$("#atletas-cont-03").slideDown(400);
+			$("#atletas-cont-03").slideDown(400,function(){
+				centroOlimpico();
+			});
 		},1000);
 	});
-
 });

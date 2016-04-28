@@ -1,4 +1,4 @@
-$(document).ready(function(){
+
 	//CENTRO
 	function centroOlimpico() {
 		var mapCanvas = document.getElementById('map');
@@ -210,5 +210,3 @@ $(document).ready(function(){
 			markerpinCentro11.setMap(map);
 		//----FIM----//
 		}
-	google.maps.event.addDomListener(window, 'load', centroOlimpico);
-});
