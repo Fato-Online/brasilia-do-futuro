@@ -407,6 +407,14 @@ div.parallax-container {
 	font-weight: 300;
 }
 
+/*MAPS*/
+.maps {
+	width: 100%;
+	height: 400px;
+	margin-top: 20px;
+	background-color: #ccc;
+}
+
 
 /*TABLET PAISAGEM*/
 @media (max-width: 991px) {

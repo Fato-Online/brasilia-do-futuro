@@ -179,4 +179,10 @@ $(document).ready(function(){
 		},1000);
 	});
 
+	$("#atletas-03").click(function(event) {
+		setTimeout(function(){
+			$("#atletas-cont-03").slideDown(400);
+		},1000);
+	});
+
 });
