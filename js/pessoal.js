@@ -28,7 +28,7 @@ $(document).ready(function(){
 
 	$('.btn-access').click(function(event) {
 		$("body,html").animate({
-			scrollTop: $("#atletas").offset().top
+			scrollTop: $("#personagens").offset().top
 		}, 2000,"easeInOutQuint");
 	});
 
@@ -42,6 +42,12 @@ $(document).ready(function(){
 	$('#proximo-02').click(function(event) {
 		$("body,html").animate({
 			scrollTop: $("#atletas").offset().top
+		}, 2000,"easeInOutQuint");
+	});
+
+	$('#proximo-03').click(function(event) {
+		$("body,html").animate({
+			scrollTop: $("#personagens").offset().top
 		}, 2000,"easeInOutQuint");
 	});
 
@@ -182,6 +188,37 @@ $(document).ready(function(){
 	$("#atletas-03").click(function(event) {
 		setTimeout(function(){
 			$("#atletas-cont-03").slideDown(400,function(){
+				centroOlimpico();
+			});
+		},1000);
+	});
+
+	//PERSONAGENS
+	$("#personagens .menu-interno li").click(function(event) {
+		if ($(window).width()<479) {
+
+		} else{
+			$("body,html").animate({
+					scrollTop: $("#personagens").offset().top
+				}, 1000,"easeInOutQuint");
+		};
+	});
+
+	$("#personagens-01").click(function(event) {
+		setTimeout(function(){
+			$("#personagens-cont-01").slideDown(400);
+		},1000);
+	});
+
+	$("#personagens-02").click(function(event) {
+		setTimeout(function(){
+			$("#personagens-cont-02").slideDown(400);
+		},1000);
+	});
+
+	$("#personagens-03").click(function(event) {
+		setTimeout(function(){
+			$("#personagens-cont-03").slideDown(400,function(){
 				centroOlimpico();
 			});
 		},1000);
