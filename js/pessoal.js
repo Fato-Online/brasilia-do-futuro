@@ -218,9 +218,46 @@ $(document).ready(function(){
 
 	$("#personagens-03").click(function(event) {
 		setTimeout(function(){
-			$("#personagens-cont-03").slideDown(400,function(){
-				centroOlimpico();
-			});
+			$("#personagens-cont-03").slideDown(400);
 		},1000);
 	});
+
+		$("#personagens-03").one( 'click', function(event) {
+			setTimeout(function(){
+				$('.bxslider').bxSlider({
+							adaptiveHeight: true
+						});
+			},2000)
+		});
+
+	// GALERIA
+		//FOTOS
+		var fotos = [
+         		"photo/01.jpg",
+         		"photo/02.jpg",
+         		"photo/03.jpg",
+         		"photo/04.jpg",
+         		"photo/05.jpg",
+         		"photo/06.jpg",
+         		"photo/07.jpg",
+         		"photo/08.jpg",
+         		"photo/09.jpg",
+         		"photo/10.jpg",
+         		"photo/11.jpg",
+         		"photo/12.jpg",
+         		"photo/13.jpg",
+         		"photo/14.jpg",
+         		"photo/15.jpg",
+         		"photo/16.jpg",
+         		"photo/17.jpg",
+         		"photo/18.jpg",
+         		"photo/19.jpg"
+		]
+
+		var imgs = '';
+		for( foto in fotos) {
+				imgs += "<li>"+ "<img src=" + fotos[foto] + ">" + "</li>";
+		}
+
+		$(".bxslider").html(imgs);
 });

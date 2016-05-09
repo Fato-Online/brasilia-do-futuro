@@ -434,6 +434,15 @@ div.parallax-container {
 	background-color: #ccc;
 }
 
+/*GALLERIA*/
+.bxslider{
+	width: 100%;
+	min-height: 80px;
+}
+.bxslider img{
+	width: 100%;
+}
+
 
 /*TABLET PAISAGEM*/
 @media (max-width: 991px) {
@@ -627,6 +636,21 @@ div.parallax-container {
 	#atletas .text-page{
 		padding-top: 400px;
 	}
+
+	/*PERSONAGENS*/
+	.computador-personagens{
+		background-position: 50% 25%;
+		background-size: 100%;
+	}
+
+	#personagens .parallax3{
+		background-position: 0% 200px;
+	}
+
+	#personagens .text-page{
+		padding-top: 400px;
+	}
+
 
 	.text-page h1{
 		text-transform: uppercase;
