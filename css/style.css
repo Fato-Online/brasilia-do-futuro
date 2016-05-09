@@ -190,7 +190,7 @@ div.parallax-container {
 
 /*TURISMO*/
 .brasilia-turismo{
-	background-image: url('../images/bsb-turismo.png');
+	background-image: url('https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/bsb-turismo.png');
 	background-position: 10% 40%;
 	background-size: 40%;
 	width: 100%;

@@ -249,25 +249,25 @@ $(document).ready(function(){
 	// GALERIA
 		//FOTOS
 		var fotos = [
-         		"images/photo/01.jpg",
-         		"images/photo/02.jpg",
-         		"images/photo/03.jpg",
-         		"images/photo/04.jpg",
-         		"images/photo/05.jpg",
-         		"images/photo/06.jpg",
-         		"images/photo/07.jpg",
-         		"images/photo/08.jpg",
-         		"images/photo/09.jpg",
-         		"images/photo/10.jpg",
-         		"images/photo/11.jpg",
-         		"images/photo/12.jpg",
-         		"images/photo/13.jpg",
-         		"images/photo/14.jpg",
-         		"images/photo/15.jpg",
-         		"images/photo/16.jpg",
-         		"images/photo/17.jpg",
-         		"images/photo/18.jpg",
-         		"images/photo/19.jpg"
+         		"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/01.jpg",
+         		"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/02.jpg",
+         		"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/03.jpg",
+         		"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/04.jpg",
+         		"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/05.jpg",
+         		"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/06.jpg",
+         		"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/07.jpg",
+         		"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/08.jpg",
+         		"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/09.jpg",
+         		"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/10.jpg",
+         		"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/11.jpg",
+         		"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/12.jpg",
+         		"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/13.jpg",
+         		"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/14.jpg",
+         		"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/15.jpg",
+         		"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/16.jpg",
+         		"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/17.jpg",
+         		"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/18.jpg",
+         		"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/19.jpg"
 		]
 
 		var imgs = '';
