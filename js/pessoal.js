@@ -28,7 +28,7 @@ $(document).ready(function(){
 
 	$('.btn-access').click(function(event) {
 		$("body,html").animate({
-			scrollTop: $("#personagens").offset().top
+			scrollTop: $("#turismo").offset().top
 		}, 2000,"easeInOutQuint");
 	});
 
@@ -48,6 +48,12 @@ $(document).ready(function(){
 	$('#proximo-03').click(function(event) {
 		$("body,html").animate({
 			scrollTop: $("#personagens").offset().top
+		}, 2000,"easeInOutQuint");
+	});
+
+	$('#proximo-04').click(function(event) {
+		$("body,html").animate({
+			scrollTop: $("#turismo").offset().top
 		}, 2000,"easeInOutQuint");
 	});
 
@@ -216,42 +222,52 @@ $(document).ready(function(){
 		},1000);
 	});
 
-	$("#personagens-03").click(function(event) {
-		setTimeout(function(){
-			$("#personagens-cont-03").slideDown(400);
-		},1000);
+	// TURISMO
+	$("#turismo .menu-interno li").click(function(event) {
+		if ($(window).width()<479) {
+
+		} else{
+			$("body,html").animate({
+					scrollTop: $("#turismo").offset().top
+				}, 1000,"easeInOutQuint");
+		};
 	});
 
-		$("#personagens-03").one( 'click', function(event) {
-			setTimeout(function(){
-				$('.bxslider').bxSlider({
-							adaptiveHeight: true
-						});
-			},2000)
-		});
+	$("#turismo-01").click(function(event) {
+		setTimeout(function(){
+			$("#turismo-cont-01").slideDown(400);
+		},1000);
+	});
+	$("#turismo-01").one( 'click', function(event) {
+		setTimeout(function(){
+			$('.bxslider').bxSlider({
+						adaptiveHeight: true
+					});
+		},2000)
+	});
 
 	// GALERIA
 		//FOTOS
 		var fotos = [
-         		"photo/01.jpg",
-         		"photo/02.jpg",
-         		"photo/03.jpg",
-         		"photo/04.jpg",
-         		"photo/05.jpg",
-         		"photo/06.jpg",
-         		"photo/07.jpg",
-         		"photo/08.jpg",
-         		"photo/09.jpg",
-         		"photo/10.jpg",
-         		"photo/11.jpg",
-         		"photo/12.jpg",
-         		"photo/13.jpg",
-         		"photo/14.jpg",
-         		"photo/15.jpg",
-         		"photo/16.jpg",
-         		"photo/17.jpg",
-         		"photo/18.jpg",
-         		"photo/19.jpg"
+         		"images/photo/01.jpg",
+         		"images/photo/02.jpg",
+         		"images/photo/03.jpg",
+         		"images/photo/04.jpg",
+         		"images/photo/05.jpg",
+         		"images/photo/06.jpg",
+         		"images/photo/07.jpg",
+         		"images/photo/08.jpg",
+         		"images/photo/09.jpg",
+         		"images/photo/10.jpg",
+         		"images/photo/11.jpg",
+         		"images/photo/12.jpg",
+         		"images/photo/13.jpg",
+         		"images/photo/14.jpg",
+         		"images/photo/15.jpg",
+         		"images/photo/16.jpg",
+         		"images/photo/17.jpg",
+         		"images/photo/18.jpg",
+         		"images/photo/19.jpg"
 		]
 
 		var imgs = '';
