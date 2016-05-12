@@ -57,6 +57,12 @@ $(document).ready(function(){
 		}, 2000,"easeInOutQuint");
 	});
 
+	$('#proximo-05').click(function(event) {
+		$("body,html").animate({
+			scrollTop: $("#jovem").offset().top
+		}, 2000,"easeInOutQuint");
+	});
+
 	$('.btn-top').click(function(event) {
 		$("body,html").animate({
 			scrollTop: $("body").offset().top
@@ -246,6 +252,21 @@ $(document).ready(function(){
 		},2000)
 	});
 
+	$("#turismo-02").click(function(event) {
+		setTimeout(function(){
+			$("#turismo-cont-02").slideDown(400, function(){
+				mapaTurismoBike();
+			});
+		},1000);
+	});
+	$("#turismo-02").one( 'click', function(event) {
+		setTimeout(function(){
+			$('.galeriaBike').bxSlider({
+						adaptiveHeight: true
+					});
+		},2000)
+	});
+
 	// GALERIA
 		//FOTOS
 		var fotos = [
@@ -276,4 +297,36 @@ $(document).ready(function(){
 		}
 
 		$(".bxslider").html(imgs);
+
+		//BIKES
+		var fotosBike = [
+			"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/01bike.jpg",
+			"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/02bike.jpg",
+			"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/03bike.jpg",
+			"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/04bike.jpg",
+			"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/05bike.jpg"
+		]
+
+		var imgsBikes = '';
+		for(fotoBike in fotosBike){
+			imgsBikes += "<li>"+ "<img src=" + fotosBike[fotoBike] + ">" + "</li>";
+		}
+		$(".galeriaBike").html(imgsBikes);
+
+	// JOVEM
+	$("#jovem .menu-interno li").click(function(event) {
+		if ($(window).width()<479) {
+
+		} else{
+			$("body,html").animate({
+					scrollTop: $("#jovem").offset().top
+				}, 1000,"easeInOutQuint");
+		};
+	});
+
+	$("#jovem-01").click(function(event) {
+		setTimeout(function(){
+			$("#jovem-cont-01").slideDown(400);
+		},1000);
+	});
 });

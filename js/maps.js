@@ -1,5 +1,4 @@
-
-	//CENTRO
+//CENTRO
 	function centroOlimpico() {
 		var mapCanvas = document.getElementById('map');
 		var mapOptions = {
@@ -209,4 +208,106 @@
 			});
 			markerpinCentro11.setMap(map);
 		//----FIM----//
+	}
+
+// MAPA BIKE
+function mapaTurismoBike() {
+		var mapCanvasBike = document.getElementById('mapBike');
+		var mapOptionsBike = {
+			center: new google.maps.LatLng(-15.799695, -47.774484),
+			zoom: 9,
+			scrollwheel: false,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
 		}
+		var mapBike = new google.maps.Map(mapCanvasBike, mapOptionsBike)
+
+		//------------------pinBike01
+			var pinBike01 = {lat: -15.9707743, lng: -47.8607262};
+				var markerpinBike01 = new google.maps.Marker({
+					position: pinBike01,
+					 icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+					map: mapBike
+				});
+			var contentpinBike01 = '<b>Cachoeira Tororó</b>'+'<br><a href="https://goo.gl/maps/94ARgcdoHaB2" target="_blank">Clique aqui</a> e veja como chegar.';
+
+			var infopinBike01 = new google.maps.InfoWindow({
+				content: contentpinBike01,
+				maxWidth: 300
+			});
+			markerpinBike01.addListener('click', function() {
+				infopinBike01.open(mapBike, markerpinBike01);
+			});
+			markerpinBike01.setMap(mapBike);
+
+			//------------------pinBike02
+			var pinBike02 = {lat: -15.800985, lng: -48.0800911};
+				var markerpinBike02 = new google.maps.Marker({
+					position: pinBike02,
+					 icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+					map: mapBike
+				});
+			var contentpinBike02 = '<b>Floresta Nacional de Brasília</b>'+'<br><a href="https://goo.gl/maps/kXh3nrNC2pB2" target="_blank">Clique aqui</a> e veja como chegar.';
+
+			var infopinBike02 = new google.maps.InfoWindow({
+				content: contentpinBike02,
+				maxWidth: 300
+			});
+			markerpinBike02.addListener('click', function() {
+				infopinBike02.open(mapBike, markerpinBike02);
+			});
+			markerpinBike02.setMap(mapBike);
+
+			//------------------pinBike03
+			var pinBike03 = {lat: -15.7385389, lng: -47.9258527};
+				var markerpinBike03 = new google.maps.Marker({
+					position: pinBike03,
+					 icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+					map: mapBike
+				});
+			var contentpinBike03 = '<b>Parque Nacional de Brasília</b>'+'<br><a href="https://goo.gl/maps/RbeLaDLGnKQ2" target="_blank">Clique aqui</a> e veja como chegar.';
+
+			var infopinBike03 = new google.maps.InfoWindow({
+				content: contentpinBike03,
+				maxWidth: 300
+			});
+			markerpinBike03.addListener('click', function() {
+				infopinBike03.open(mapBike, markerpinBike03);
+			});
+			markerpinBike03.setMap(mapBike);
+
+			//------------------pinBike04
+			var pinBike04 = {lat: -15.9466779, lng: -48.3258309};
+				var markerpinBike04 = new google.maps.Marker({
+					position: pinBike04,
+					 icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+					map: mapBike
+				});
+			var contentpinBike04 = '<b>Santo Antônio do Descoberto</b>'+'<br><a href="https://goo.gl/maps/cXZXwjht5cu" target="_blank">Clique aqui</a> e veja como chegar.';
+
+			var infopinBike04 = new google.maps.InfoWindow({
+				content: contentpinBike04,
+				maxWidth: 300
+			});
+			markerpinBike04.addListener('click', function() {
+				infopinBike04.open(mapBike, markerpinBike04);
+			});
+			markerpinBike04.setMap(mapBike);
+
+			//------------------pinBike05
+			var pinBike05 = {lat: -15.54554, lng: -47.3530464};
+				var markerpinBike05 = new google.maps.Marker({
+					position: pinBike05,
+					 icon: 'http://maps.google.com/mapfiles/ms/icons/blue-dot.png',
+					map: mapBike
+				});
+			var contentpinBike05 = '<b>Formosa</b>'+'<br><a href="https://goo.gl/maps/nAEswm64tfx" target="_blank">Clique aqui</a> e veja como chegar.';
+
+			var infopinBike05 = new google.maps.InfoWindow({
+				content: contentpinBike05,
+				maxWidth: 300
+			});
+			markerpinBike05.addListener('click', function() {
+				infopinBike05.open(mapBike, markerpinBike05);
+			});
+			markerpinBike05.setMap(mapBike);
+}

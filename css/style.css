@@ -207,8 +207,26 @@ div.parallax-container {
 	padding-top: 150px;
 }
 
-/*TXT-PAGE*/
+/*JOVEM*/
+.jovem-brasilia{
+	background-image: url('https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/jovem-bsb.png');
+	background-position: 10% 0%;
+	background-size: 40%;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	bottom: -500px;
+}
 
+#jovem .parallax3{
+	background-position: 0% 200px;
+}
+
+#jovem .text-page{
+	padding-top: 150px;
+}
+
+/*TXT-PAGE*/
 .text-page{
 	color: white;
 	z-index: 998;
@@ -229,7 +247,7 @@ div.parallax-container {
 
 .menu-interno li{
 	display: inline-block;
-	padding: 0 30px;
+	padding: 0 30px 0 0;
 	opacity: 0.5;
 }
 
@@ -245,7 +263,7 @@ div.parallax-container {
 .sections{
 	background: white;
 	right: -50%;
-	position: absolute !important;
+	position: fixed !important;
 	z-index: 999;
 	height: 100%;
 	padding: 50px 55px !important;
@@ -684,6 +702,21 @@ div.parallax-container {
 		padding-top: 400px;
 	}
 
+	/*JOVEM*/
+	.jovem-brasilia{
+		background-position: 50% 25%;
+		background-size: 100%;
+	}
+
+	#jovem .parallax3{
+		background-position: 0% 200px;
+	}
+
+	#jovem .text-page{
+		padding-top: 400px;
+	}
+
+	/*TEXT-PAGE*/
 	.text-page h1{
 		text-transform: uppercase;
 		font-family: 'Open Sans', sans-serif;
