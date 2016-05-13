@@ -28,7 +28,7 @@ $(document).ready(function(){
 
 	$('.btn-access').click(function(event) {
 		$("body,html").animate({
-			scrollTop: $("#turismo").offset().top
+			scrollTop: $("#jovem").offset().top
 		}, 2000,"easeInOutQuint");
 	});
 
