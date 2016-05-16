@@ -329,4 +329,38 @@ $(document).ready(function(){
 			$("#jovem-cont-01").slideDown(400);
 		},1000);
 	});
+
+	$("#jovem-02").click(function(event) {
+		setTimeout(function(){
+			$("#jovem-cont-02").slideDown(400);
+		},1000);
+	});
+
+	$("#jovem-02").one( 'click', function(event) {
+		setTimeout(function(){
+			$('.galeriaMusica').bxSlider({
+						adaptiveHeight: true
+					});
+		},2000)
+	});
+
+	//BIKES
+		var fotosMusica = [
+			"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/musica-01.jpg",
+			"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/musica-02.jpg",
+			"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/musica-03.jpg",
+			"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/musica-04.jpg",
+			"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/musica-05.jpg",
+			"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/musica-06.jpg",
+			"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/musica-07.jpg",
+			"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/musica-08.jpg",
+			"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/musica-09.jpg",
+			"https://raw.githubusercontent.com/Fato-Online/brasilia-do-futuro2/develop/images/photo/musica-10.jpg"
+		]
+
+		var imgsMusica = '';
+		for(fotoMusica in fotosMusica){
+			imgsMusica += "<li>"+ "<img src=" + fotosMusica[fotoMusica] + ">" + "</li>";
+		}
+		$(".galeriaMusica").html(imgsMusica);
 });

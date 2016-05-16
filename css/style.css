@@ -708,6 +708,10 @@ div.parallax-container {
 		background-size: 100%;
 	}
 
+	#jovem h1{
+		font-size: 30px !important;
+	}
+
 	#jovem .parallax3{
 		background-position: 0% 200px;
 	}
